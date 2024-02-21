@@ -31,6 +31,11 @@ if os.path.exists(config_path):
         JOB_SCRAPER_DEFAULT_URL = config["DEFAULT"]["URL"]
     else:
         raise ValueError("URL key not found in the configuration file!")
+    # Reading the DEFAULT section
+    if "JOBURL" in config["DEFAULT"]:
+        JOB_SCRAPER_DEFAULT_JOBURL = config["DEFAULT"]["JOBURL"]
+    else:
+        raise ValueError("URL key not found in the configuration file!")
     
     # Reading the REMOTE section
     if "URL" in config["REMOTE"]:

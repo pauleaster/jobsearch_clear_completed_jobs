@@ -2,3 +2,4 @@ __pycache__
 
 .vscode
 scraper_state.csv
+completed_jobs_log.txt

@@ -30,15 +30,13 @@ class NetworkHandler:
     HTTP requests, with delays set by `DelaySettings`.
     """
 
-    def __init__(self, url):
+    def __init__(self):
         """
         Initialize a handler, set up the Selenium driver and open the URL.
         """
         self.successive_url_read_delay = DelaySettings.SUCCESSIVE_URL_READ_DELAY.value
         self.last_request_time = 0
         self.time_since_last_request = 0
-        # print(f"Opening {url}")
-        # self.driver.get(url)
 
 
     def handle_successive_url_read_delay(self):
